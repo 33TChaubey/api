@@ -54,3 +54,6 @@ coverage.xml
 # OS generated files
 .DS_Store
 Thumbs.db
+/backend/api/migrations/__init__.py
+/backend/api/__init__.py
+/backend/cfehome/__init__.py
