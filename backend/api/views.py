@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from backend.products.models import Product
+from django.forms.models import model_to_dict
+from products.models import Product
 
 
 
@@ -10,7 +11,5 @@ def api_home(request):
     data = {}
     #mode data
     if model_data:
-        data['title'] = model_data.title
-        data['content'] = model_data.content
-        data['price'] = model_data.price
+        data = model_to_dict(model_data)
     return JsonResponse(data)
