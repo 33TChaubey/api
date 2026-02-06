@@ -1,4 +1,7 @@
 import requests
-import json
 
- = {"Accept": "application/vnd.github.v3+json"}
+endpoint = "http://localhost:8000/api/"
+
+get_response = requests.get(endpoint)
+print(get_response.status_code)
+print(get_response.json()['message'])
